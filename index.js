@@ -8,12 +8,12 @@ app.listen(PORT, () => {
   console.log("Servidor escutando");
 });
 
-app.get("/coisas/carros", (req, res) =>
-  res.send("Você está no diretório /coisas/carros")
-);
+app
+  .route("/coisas/carros")
+  .get((req, res) => {})
+  .post((req, res) => {});
 
-app.get("/coisas/carros/:CarroId", (req, res) => {});
-
-app.post("/coisas/carros", (req, res) => {});
-
-app.put("/coisas/carros/CarroId", (req, res) => {});
+app
+  .route("/coisas/carros/:CarroId")
+  .get((req, res) => {})
+  .put((req, res) => {});
